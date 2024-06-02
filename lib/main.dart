@@ -15,7 +15,7 @@ import 'widgets.dart';
 import 'utils.dart';
 
 final List<String> imgList = [
-  'https://raw.githubusercontent.com/dnth/huggingface-timm-mobile-blogpost/main/sample_images/bacterial_leaf_blight/100023.jpg',
+  /** 'https://raw.githubusercontent.com/dnth/huggingface-timm-mobile-blogpost/main/sample_images/bacterial_leaf_blight/100023.jpg',
   'https://raw.githubusercontent.com/dnth/huggingface-timm-mobile-blogpost/main/sample_images/bacterial_leaf_blight/100049.jpg',
   'https://raw.githubusercontent.com/dnth/huggingface-timm-mobile-blogpost/main/sample_images/bacterial_leaf_streak/100042.jpg',
   'https://raw.githubusercontent.com/dnth/huggingface-timm-mobile-blogpost/main/sample_images/bacterial_leaf_streak/100084.jpg',
@@ -34,7 +34,15 @@ final List<String> imgList = [
   'https://raw.githubusercontent.com/dnth/huggingface-timm-mobile-blogpost/main/sample_images/normal/100007.jpg',
   'https://raw.githubusercontent.com/dnth/huggingface-timm-mobile-blogpost/main/sample_images/normal/100002.jpg',
   'https://raw.githubusercontent.com/dnth/huggingface-timm-mobile-blogpost/main/sample_images/tungro/100011.jpg',
-  'https://raw.githubusercontent.com/dnth/huggingface-timm-mobile-blogpost/main/sample_images/tungro/100013.jpg'
+  'https://raw.githubusercontent.com/dnth/huggingface-timm-mobile-blogpost/main/sample_images/tungro/100013.jpg'*/
+  'https://raw.githubusercontent.com/IUTNancyCharlemagne/huggingface-api-Hugoll-1/main/img/jupiter.jpg',
+  'https://raw.githubusercontent.com/IUTNancyCharlemagne/huggingface-api-Hugoll-1/main/img/mars.jpg',
+  'https://raw.githubusercontent.com/IUTNancyCharlemagne/huggingface-api-Hugoll-1/main/img/mercure.jpg',
+  'https://raw.githubusercontent.com/IUTNancyCharlemagne/huggingface-api-Hugoll-1/main/img/neptune.jpg',
+  'https://raw.githubusercontent.com/IUTNancyCharlemagne/huggingface-api-Hugoll-1/main/img/saturne.jpg',
+  'https://raw.githubusercontent.com/IUTNancyCharlemagne/huggingface-api-Hugoll-1/main/img/terre.jpg',
+  'https://raw.githubusercontent.com/IUTNancyCharlemagne/huggingface-api-Hugoll-1/main/img/uranus.jpg',
+  'https://raw.githubusercontent.com/IUTNancyCharlemagne/huggingface-api-Hugoll-1/main/img/venus.jpg'
 ];
 
 void main() {
@@ -48,11 +56,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Paddy Disease Classifier',
+      title: 'Planete Classifier',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Paddy Disease Classifier'),
+      home: const MyHomePage(title: 'Planete Classifier'),
       debugShowCheckedModeBanner: false,
     );
   }
@@ -221,7 +229,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           padding: const EdgeInsets.symmetric(
                               vertical: 10.0, horizontal: 20.0),
                           child: Text(
-                            'GT: ${imgList[imgList.indexOf(item)].split('/').reversed.elementAt(1)}', // get the class name from url
+                            'GT: ${imgList[imgList.indexOf(item)].split('/').reversed.elementAt(0).split('.')[0]}', // get the class name from url
                             style: const TextStyle(
                               color: Colors.white,
                               fontSize: 15.0,
